@@ -1,0 +1,65 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19 Vaccine Analytics</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <header>
+        <h1>COVID-19 Vaccine Analytics</h1>
+        <label for="state-select">Select State:</label>
+        <select id="state-select">
+            <option value="" selected disabled>Select State</option>
+        </select>
+        <a id="download-btn" href="https://drive.google.com/uc?id=1cZuVxpW6d-aiOWmve2fmIH126_tJR0y6" download>Download CSV</a>
+    </header>
+    
+    
+    
+
+
+
+    <section id="data-section">
+        <table id="vaccine-data">
+            <thead>
+                <tr>
+                    <th>State/Union Territory</th>
+                    <th>Total Vaccination Doses</th>
+                    <th>Dose 1</th>
+                    <th>Dose 2</th>
+                    <th>Males Vaccinated</th>
+                    <th>Females Vaccinated</th>
+                </tr>
+            </thead>
+            <tbody id="data-body">
+                <!-- Data will be populated dynamically based on selected state -->
+            </tbody>
+        </table>
+    </section>
+
+    <section id="faq-section">
+        <h2>FAQ</h2>
+        <ul>
+            <li><a href="/first_dose_by_state">First Dose by State</a></li>
+            <li><a href="/second_dose_by_state">Second Dose by State</a></li>
+            <li><a id="males-vaccinated-link" href="#">Total Males Vaccinated</a></li>
+            <li><a id="females-vaccinated-link" href="#">Total Females Vaccinated</a></li>
+
+            <li><a href="/describe">COVID-19 Vaccine Analytics (Describe)</a></li>
+        </ul>
+    </section>
+
+
+    <footer>
+        <p>&copy; 2024 All rights reserved. Girish <a href="https://docs.google.com/spreadsheets/d/1ldMZE2ZAOVvKwRa26L7H8GKfa36DATwzSwlW_m58poA/edit?usp=sharing">Dataset</a></p>
+        
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
